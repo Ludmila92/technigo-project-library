@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Don't forget to connect the CSS file -->
+    <title>My recipe book</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>My recipe book</h1>
+      <p>Welcome to my recipe book!</p>
+    </header>
+
+    <main>
+      <div class="control-wrapper">
+        <!--  Filter by cuisine -->
+        <section class="controls">
+          <select id="cusine-filter" onchange="filterRecipes(this.value)">
+            <option value="all">All</option>
+            <option value="italian">Italian</option>
+            <option value="american">American</option>
+            <option value="south american">South American</option>
+            <option value="chinese">Chinese</option>
+            <option value="south east asian">South East Asian</option>
+            <option value="balanced">Balanced</option>
+            <option value="low-carb">Low Carb</option>
+            <option value="high-fiber">High Fiber</option>
+          </select>
+        </section>
+
+        <section class="sorting">
+          <!-- Sorting options -->
+
+          <select id="sort-options" onchange="sortRecipes(this.value)">
+            <option value="">Sort by...</option>
+            <option value="time-asc">Fastest first</option>
+            <option value="time-desc">Slowest first</option>
+            <option value="ingredients-asc">Fewest ingredients</option>
+            <option value="ingredients-desc">Most ingredients</option>
+          </select>
+        </section>
+
+        <section class="random">
+          <!-- Random recipe button  -->
+          <button class="random-btn" onclick="showRandom()">
+            Show random recipe
+          </button>
+        </section>
+      </div>
+
+      <!-- Recipe cards -->
+      <section class="recipe-cards">
+        <h2>Recipes</h2>
+        <div id="recipe-container"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer>
+      <p>© 2026 My Recipe Book. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

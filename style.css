@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #faf8f5;
+  font-family: "Lato", sans-serif;
+  color: #1a1a1a;
+}
+
+header {
+  background-color: #2d4a3e;
+  color: white;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.control-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.controls,
+.sorting,
+.random {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+select {
+  padding: 10px 16px;
+  border: 1px solid #2d4a3e;
+  border-radius: 20px;
+  background-color: white;
+  color: #2d4a3e;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  min-width: 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232d4a3e' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.recipe-cards h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #2d4a3e;
+  margin-bottom: 16px;
+}
+
+/*Button styles*/
+button {
+  background-color: white;
+  border: 1px solid #2d4a3e;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+button:hover {
+  background-color: #2d4a3e;
+  color: white;
+}
+
+.random-btn {
+  background-color: #2d4a3e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+/* Recipe card styles */
+
+#recipe-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 32px 48px;
+  margin-top: 32px;
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card-info {
+  padding: 16px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.recipe-card-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-camp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 64px;
+}
+
+.recipe-meta {
+  min-height: 50px;
+  margin-bottom: 8px;
+}
+
+.recipe-card-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.recipe-card-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.recipe-card-info ul li {
+  margin-bottom: 4px;
+}
+
+.recipe-card-info hr {
+  border: none;
+  border-top: 1px solid #e8e0d5;
+  margin: 12px 0;
+}
+
+.recipe-card-info a {
+  color: #2d4a3e;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  #recipe-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  background-color: #2d4a3e;
+  color: white;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 48px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
